@@ -57,3 +57,15 @@ Or you can run ```get_average_data('UCI HAR Dataset')``` after load the R script
 [1] 180  68
 ```
 
+## Code description
+
+1. Load test data
+2. Get required variable names
+3. Select required variables from loaded test data
+4. Add *subject* and *activity* columns, and replace number with meaningful activity names
+5. Rename column names, remove '()', merge '...' to '.', trim end '.'
+6. Do 1-4 for train data
+7. Merge test and train data
+8. Group data by subject and activity
+9. Caculate average by group
+10. Save file with write.table
